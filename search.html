@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Caregivers</title>
+    <style>
+        body {
+            background-image: url('https://hollyservices.com/wp-content/uploads/start_caregiving.jpg');
+            background-size:cover;
+            margin-bottom: 100px;
+            color: rgb(15, 15, 16);
+        }
+
+        header {
+            color: rgb(19, 19, 19);
+            margin: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .search-page {
+            padding: 10px;
+            margin-top: 70px;
+        }
+
+        .filters {
+            margin-bottom: 50px;
+            font-size: 1.3em;
+            color: #0a0a0a;
+        }
+
+        .filters label {
+            margin-right: 20px;
+        }
+
+        .filters select,
+        .filters input {
+            padding: 10px;
+            font-size: 1.0em;
+            margin-right: 20px;
+            border-radius: 5px;
+        }
+
+        .search-results {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .search-result-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+        }
+
+        .search-result-card h3 {
+            margin: 0 0 10px;
+        }
+
+        .search-result-card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .search-result-card a {
+            display: inline-block;
+            background-color: #5C8DFF;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .search-result-card a:hover {
+            background-color: #4A76D2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Care Connect</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="caregiverprofile.html">Caregiver Profile</a></li>
+                <li><a href="registrationpage.html">Register</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="search-page">
+        <h2>Search for Caregivers</h2>
+
+    <section class="filters">
+        <br><label for="location">Location:</label>
+        <select id="location">
+            <option value="any">Any Location</option>
+            <option value="city">City1</option>
+            <option value="suburbs">City2</option>
+            <option value="city">City3</option>
+        </select><br>
+
+        <br><label for="experience">Experience:</label>
+        <select id="experience">
+            <option value="any">Any Experience</option>
+            <option value="1year">1+ Year</option>
+            <option value="5years">5+ Years</option>
+            </select><br>
+
+            <br><label for="availability">Availability:</label>
+            <select id="availability">
+                <option value="any">Any Availability</option>
+                <option value="weekdays">Weekdays</option>
+                <option value="weekends">Weekends</option>
+            </select><br>
+
+            <br><button onclick="filterResults()">Apply Filters</button>
+        </section>
+
+        <section class="search-results" id="search-results">
+            <div class="search-result-card">
+                <h3>Jane Doe</h3>
+                <p>5+ years experience, available on weekdays</p>
+                <a href="caregiverprofile.html">View Profile</a>
+            </div>
+
+            <div class="search-result-card">
+                <h3>Paul</h3>
+                <p>2+ year experience, available on weekends</p>
+                <a href="caregiverprofile.html">View Profile</a>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        function filterResults() {
+            alert('filter applied');
+        }
+    </script>
+
+</body>
+
+</html>

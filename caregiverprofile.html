@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caregiver Profile</title>
+    <style>
+        body {
+            background-color: #7366d5;
+            margin: 0px;
+            color: white;
+        }
+
+        header {
+            background-color: #080808;
+            color: white;
+            padding: 20px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo h1 {
+            margin: 10;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin-top: 20px;
+            padding: 10;
+            display: flex;
+        }
+
+        header nav ul li {
+            margin-right: -1px;
+            margin-left: 60px;
+            display: flex;
+
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .profile-page {
+            padding: 30px;
+        }
+
+        .caregiver-details {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .caregiver-details img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .caregiver-info {
+            flex: 1;
+        }
+
+        .caregiver-info h2 {
+            margin: 0;
+        }
+
+        .caregiver-info p {
+            font-size: 1.1em;
+            color: #f6f0f0;
+        }
+
+        .caregiver-info .bio {
+            margin-top: 20px;
+        }
+
+        .contact-btn {
+            background-color: #032a85;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+        }
+
+        .contact-btn:hover {
+            background-color: #34569e;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">
+            <h1>Care Connect</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="caregiverprofile.html">Caregiver Profile</a></li>
+                <li><a href="registrationpage.html">Register</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile-page">
+        <h2>Caregiver Profile</h2>
+        <div class="caregiver-details">
+            <img src="https://imgcdn.stablediffusionweb.com/2024/3/11/f4330b44-9615-4d23-bedc-c696a8a55808.jpg" alt="Caregiver Image">
+            <div class="caregiver-info">
+                <h2>Paul</h2>
+                <p><strong>Experience:</strong> 2+ years</p>
+                <p><strong>Availability:</strong> Weekdays</p>
+                <p><strong>Location:</strong> Delhi </p>
+
+                <div class="bio">
+                    <h3>Bio</h3>
+                    <p>Paul is a passionate caregiver with over 2 years of experience working with children of all ages.
+                        He is dedicated to providing a safe, nurturing, and fun environment for kids. Paul enjoys
+                        outdoor activities, reading, and teaching creative arts.</p>
+                </div>
+
+                <a href="contact.html" class="contact-btn">Contact Paul</a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

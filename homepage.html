@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareConnect: Connecting Care for All Ages</title>
+    <style>
+        body {
+            font-family:cursive;
+            margin: 20px;
+            padding: 0;
+            background-color: #f7e3f9;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: url('https://i.pinimg.com/736x/a5/a4/10/a5a410f601fae1459b453131f8d61e39.jpg') no-repeat center center/cover;
+            color: rgb(15, 15, 16);
+            padding: 80px 10px;
+            text-align: center;
+            margin-bottom: -10px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+        }
+
+        header p {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .header-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .header-buttons a {
+            padding: 12px 25px;
+            background-color: #be5add;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.2s ease;
+        }
+
+        .header-buttons a:hover {
+            background-color: #7b0895;
+        }
+
+        .images-section .text {
+            width: 40%;
+            background-color: #faf9fa;
+            text-align: left;
+            border: 2px solid #ddd;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .buttons-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttons-section h2 {
+            font-size: 2.5em;
+            color: #2e2f3b;
+            margin-bottom: 20px;
+        }
+
+        .buttons-section a {
+            padding: 15px 30px;
+            background-color: #006F8E;
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons-section a:hover {
+            background-color: #2ebbe6;
+        }
+
+        .search-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .search-section input,
+        .search-section button {
+            padding: 12px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-section input {
+            width: 60%;
+            margin-right: 10px;
+        }
+
+        .search-section button {
+            background-color: #5C8DFF;
+            color: white;
+            cursor: pointer;
+            width: 20%;
+        }
+
+        .search-section button:hover {
+            background-color: #4A76D2;
+        }
+
+        .images-section {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .images-section .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .images-section img {
+            width: 45%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(8, 8, 8, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .images-section img:hover {
+            transform: scale(1.05);
+        }
+
+        .images-section .text {
+            width: 45%;
+            text-align: left;
+            border-left: 5px solid #8a2be2;
+            padding-left: 20px;
+        }
+
+        .squares-section {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 30px;
+            padding: 20px;
+        }
+
+        .square {
+            width: 30%;
+            height: 250px;
+            background-color: #8b84de;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 10px rgba(11, 11, 11, 0.1);
+        }
+
+        .square h3 {
+            margin-top: 0;
+            background-color: hsl(323, 79%, 87%);
+            color: #333;
+            border-radius: 600px;
+            border: 2px solid black;
+            font-size: 1.8em;
+        }
+
+        .square p {
+            font-size: 1.1em;
+        }
+        .registration-form {
+            padding: 50px;
+            width: 600px;
+            margin: 20px auto;
+            background-color: rgb(255, 254, 255);
+            border: 2px black solid;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(145, 22, 22, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 1.1em;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5C8DFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background-color: #4A76D2;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            height: 250px;
+            padding: 15px;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin: 20px;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        .header-buttons a, .buttons-section a, .square {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+        .square:hover, .header-buttons a:hover, .buttons-section a:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+        footer .social-icons a {
+            margin: 0 15px;
+            font-size: 1.8em;
+            color: white;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #ff9800;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+    <header>
+        <h1>CareConnect: Connecting Care for All Ages</h1>
+        <p>Your trusted platform for connecting with caregivers for children and senior citizens.</p>
+
+        <div class="header-buttons">
+            <a href="homepage.html">Home</a>
+            <a href="#about-section">About Us</a>
+            <a href="#registration">Register</a>
+            <a href="search.html">Search Caregivers</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+    </header>
+
+    <section class="buttons-section">
+        <h2>I am looking to...</h2>
+        <a href="#registration">Find Caretaker</a>
+        <a href="#registration">Become Caretaker</a>
+    </section>
+
+    <section class="search-section">
+        <input type="text" id="search-input" placeholder="Search for caregivers..." required>
+        <a href="search.html"><button type="submit">Search</button></a>
+    </section>
+
+    <section id="about-section" class="images-section">
+        <div class="content">
+            <img src="https://www.maidwale.com/images/blogmaidwale6-_1_-_1_.webp" alt="Child Care">
+            <div class="text">
+                <h2>Why Choose CareConnect?</h2>
+                <p>Finding the right caregiver for your loved ones can be a daunting task, but CareConnect makes the process
+                    easy. With verified profiles, reliable reviews, and a user-friendly interface, you can trust us to help
+                    you make informed decisions for your family.</p>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="text">
+                <h2>How do we help?</h2>
+                <p>CareConnect helps families by providing a simple platform to find trusted caregivers for children and seniors. It offers
+                easy search options, detailed caregiver profiles, and a secure registration process, making it convenient for families
+                to find and book reliable care quickly.
+                </p>
+            </div>
+            <img src="https://primecareseniorservices.com/wp-content/uploads/2023/10/primecareline-senior-health-services-in-illonios-why-choose-us.jpg"
+                alt="Senior Care">
+        </div>
+    </section>
+    <section class="squares-section">
+        <div class="square">
+            <img src="https://www.shutterstock.com/image-vector/nurse-takes-care-elderly-man-600nw-2492339651.jpg"
+                width="200px" alt="Health for Parents">
+            <h3>Health for Parents</h3>
+            <p>Providing care solutions that ensure parents are well-cared for in every stage of life.</p>
+        </div>
+        <div class="square">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeJLWUHz31NvJ6idi2j0XG9s_fFDtVsUSYWQ&s "
+                width="200px" alt="For Child">
+            <h3>For Child</h3>
+            <p>Ensuring your little ones are safe, engaged, and loved by a caregiver who fits their needs.</p>
+        </div>
+        <div class="square">
+            <img src="https://i.pinimg.com/736x/81/e9/cc/81e9ccf030f8876e9448bd85067b4f78.jpg" height="130px"
+                width="200px" alt="Family Care">
+            <h3>Family Care</h3>
+            <p>Bringing peace of mind to the entire family with flexible care options for loved ones of all ages.</p>
+        </div>
+    </section>
+
+
+    <section id="registration" class="registration-form">
+        <h2>Register</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <button onclick="filterResults()">Register</button>
+            </div>
+        </form>
+    </section>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <footer>
+        <p>Contact us: <a href="mailto:info@careconnect.com">info@careconnect.com</a></p>
+        <p>Follow us on social media</p><br>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="tel:+1234567990" target="_blank"><i class="fas fa-phone-alt"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="mailto:info@careconnect.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2024 CareConnect. All rights reserved.</p>
+    </footer>
+
+<script>
+    function filterResults() {
+            alert('Registered');
+    }
+</script>
+</body>
+
+</html>
